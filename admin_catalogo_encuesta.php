@@ -22,6 +22,9 @@
 </head>
 
 <body>
+    <?php
+    include("con_db.php");
+    ?>
     <main class="flex-shrink-0">
         <!-- Navigation-->
         <?php
@@ -32,32 +35,39 @@
                 <?php
                     include ("include/admin_menu.php");
                 ?>
-                <div class="col-lg-8 col-md-12">
-                    <h1 class="blog_bvn">Catálogo de Encuestas</h1>
-                    <br></br>
-                    <h4 class="blog_bvn">Nombre</h4>
-                    <input class="form-control" type="text" placeholder="Nombre de la encuesta"
-                        aria-label="default input example">
-                    <br>
-                    <h4 class="blog_bvn">Periodo</h4>
-                    <input class="form-control" type="text" placeholder="Ingrese un periodo"
-                        aria-label="default input example">
-                    <br>
-                    <h4 class="blog_bvn">Fecha</h4>
-                    <input class="form-control" type="date" placeholder="" aria-label="default input example">
-                    <br>
-                    <h4 class="blog_bvn">Descripción</h4>
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Ingresa la descripción de la encuesta"
-                            id="floatingTextarea2" style="height: 100px"></textarea>
-                        <label for="floatingTextarea2"></label>
+                <form name="form-work" action="scripts/encuesta_guardar.php" method="POST">
+                    <div class="col-lg-8 col-md-12">
+                        <h1 class="blog_bvn">Catálogo de Encuestas</h1>
+                        <br></br>
+                        <h4 class="blog_bvn">Titulo de Encuesta</h4>
+                        <input class="form-control" name="encuesta_titulo" id="encuesta_titulo" type="text"
+                            placeholder="Nombre de la encuesta" aria-label="default input example">
+                        <br>
+                        <h4 class="blog_bvn">Periodo</h4>
+                        <select class="form-control form-control-sm" name="anio_nombre" id="anio_nombre">
+                            <option value="">Seleccione el periodo</option>
+                            <?php
+                                while ($dataSelect = mysqli_fetch_array($datacat_status_aniosSelect)) { ?>
+                            <option value="<?php echo $dataSelect["anio_nombre"]; ?>">
+                                <?php echo ($dataSelect["anio_nombre"]); ?>
+                            </option>
+                            <?php } ?>
+                        </select>
+                        <br>
+                        <h4 class="blog_bvn">Descripción de la Encuesta</h4>
+                        <input class="form-control" type="text" name="encuesta_descripcion" id="encuesta_descripcion"
+                            placeholder="Ingresa una breve descripción de la encuesta"
+                            aria-label="default input example">
+                        <br>
+                        <h4 class="blog_bvn">Fecha de Cierre</h4>
+                        <input class="form-control" name="encuesta_fecha_final" id="encuesta_fecha_final" type="date" placeholder="" aria-label="default input example">
+                        <br>
+                        <div class="d-grid gap-2 d-md-block">
+                            <input class="btn btn-primary" type="submit" value="Enviar">
+                        </div>
+                        <br>
                     </div>
-                    <br>
-                    <div class="d-grid gap-2 d-md-block">
-                        <button class="btn btn-primary" type="button">Enviar</button>
-                    </div>
-                    <br>
-                </div>
+                </form>
             </div>
         </div>
         <footer class="bg-dark py-4 mt-auto">
