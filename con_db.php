@@ -18,6 +18,7 @@
 
         $sqlcat_etapa         = ("SELECT * FROM  cat_etapa ORDER BY etapa_nombre DESC LIMIT 5");
         $datacat_etapaSelect  = mysqli_query($con, $sqlcat_etapa);
+
         ?>
 
       

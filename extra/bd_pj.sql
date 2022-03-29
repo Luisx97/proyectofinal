@@ -4,6 +4,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
+-- SET default_time_zone='Mexico'
 
 -- --------------------------------------------------------
 
@@ -34,7 +35,7 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT de la tabla `administrador`
 --
 ALTER TABLE `administrador`
-  MODIFY `admin_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `admin_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 -- --------------------------------------------------------
 
@@ -65,7 +66,7 @@ ALTER TABLE `cat_etapa`
 -- AUTO_INCREMENT de la tabla `cat_etapa`
 --
 ALTER TABLE `cat_etapa`
-  MODIFY `etapa_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `etapa_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 -- --------------------------------------------------------
 
@@ -170,7 +171,7 @@ ALTER TABLE `categoria_oficinas`
 -- AUTO_INCREMENT de la tabla `categoria_oficinas`
 --
 ALTER TABLE `categoria_oficinas`
-  MODIFY `oficina_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `oficina_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 -- --------------------------------------------------------
 
@@ -199,13 +200,14 @@ INSERT INTO `categoria_status_anios` (`anio_id`,`anio_nombre`, `anio_status`) VA
 -- Indices de la tabla `categoria_status_anios`
 --
 ALTER TABLE `categoria_status_anios`
-  ADD PRIMARY KEY (`anio_id`);
+  ADD PRIMARY KEY (`anio_id`),
+  ADD KEY (`anio_nombre`);
 
 --
 -- AUTO_INCREMENT de la tabla `categoria_status_anios`
 --
 ALTER TABLE `categoria_status_anios`
-  MODIFY `anio_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `anio_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 -- --------------------------------------------------------
 
@@ -215,8 +217,8 @@ ALTER TABLE `categoria_status_anios`
 
 CREATE TABLE `encuestas` (
   `encuesta_id` int(11) NOT NULL,
-  `admin_id` int(11) NOT NULL,
   `encuesta_titulo` varchar(150) NOT NULL,
+  `anio_nombre` varchar(25) NOT NULL,
   `encuesta_descripcion` text(259) NOT NULL,
   `encuesta_estado` tinyint(1) NOT NULL,
   `encuesta_fecha_inicio` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -228,12 +230,16 @@ CREATE TABLE `encuestas` (
 --
 ALTER TABLE `encuestas`
   ADD PRIMARY KEY (`encuesta_id`),
-  ADD KEY `admin_id` (`admin_id`);
+  ADD KEY `anio_nombre` (`anio_nombre`);
 
   --
 -- AUTO_INCREMENT de la tabla `encuestas`
 --
 ALTER TABLE `encuestas`
-  MODIFY `encuesta_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `encuesta_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+-- Filtros para la tabla `usuarios_encuestas`
+--
+
 
 -- --------------------------------------------------------
