@@ -101,11 +101,6 @@
                                     </div>
 
 
-
-
-
-
-
                                     <div class="d-flex align-items-center">
                                         <div class="form-check">
                                             <input type="checkbox" name="remember" id="remember" class="form-check-input">
@@ -128,7 +123,6 @@
         </section>
 
     </main>
-    <!-- Footer-->
     <!-- Footer-->
     <?php
         include ("include/footer.php")
