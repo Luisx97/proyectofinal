@@ -11,6 +11,7 @@
     <?php
         include ("include/head.php");
     ?>
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/estilos.css">
 </head>
 
 <body>
