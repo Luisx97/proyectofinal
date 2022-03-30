@@ -60,7 +60,8 @@
                             aria-label="default input example">
                         <br>
                         <h4 class="blog_bvn">Fecha de Cierre</h4>
-                        <input class="form-control" name="encuesta_fecha_final" id="encuesta_fecha_final" type="date" placeholder="" aria-label="default input example">
+                        <input class="form-control" name="encuesta_fecha_final" id="encuesta_fecha_final" type="date"
+                            placeholder="" aria-label="default input example">
                         <br>
                         <div class="d-grid gap-2 d-md-block">
                             <input class="btn btn-primary" type="submit" value="Enviar">
