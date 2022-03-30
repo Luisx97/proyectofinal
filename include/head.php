@@ -12,4 +12,4 @@
 
 <script src="bootstrap/bootstrap.bundle.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/estilos.css">
