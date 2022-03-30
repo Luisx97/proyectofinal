@@ -10,6 +10,20 @@
     <?php
         include ("include/head.php");
     ?>
+    <script type="text/javascript">
+    $(function() {
+        $('#btn-admin-acceder').click(function(e) {
+            e.preventDefault();
+            var data = $('#form-admin').serialize();
+            $.ajax({
+                url: "scripts/validar_captcha.php",
+                type: "post",
+                data: data,  
+                }
+            });//No sé porque sale como error, pero funciona bien y si lo quitas deja de
+        });// funcionar, no corregirlo, por favor... atte: Luis
+    })
+    </script>
 </head>
 
 <body class="d-flex flex-column ">
@@ -28,12 +42,12 @@
 
                             <div class="card-body p-5">
                                 <h1 class="fs-4 card-title fw-bold mb-4">Acceder modo administrador</h1>
-                                <form action="validar.php" method="POST" class="needs-validation" novalidate=""
-                                    autocomplete="off">
+                                <form action="scripts/validar_captcha.php" method="POST" id="form-admin" name="form-admin"
+                                    class="needs-validation" novalidate="" autocomplete="off">
                                     <div class="mb-3">
                                         <label class="mb-2 text-muted" for="text">Usuario</label>
-                                        <input id="admin_usuario" type="text" placeholder="Ingrese usuario" class="form-control"
-                                            name="admin_usuario" value="" required autofocus>
+                                        <input id="admin_usuario" type="text" placeholder="Ingrese usuario"
+                                            class="form-control" name="admin_usuario" value="" required autofocus>
                                         <div class="invalid-feedback">
                                             usuario invalido
                                         </div>
@@ -42,19 +56,31 @@
                                     <div class="mb-3">
                                         <label class="mb-2 text-muted" for="text">Contraseña</label>
                                         <input id="admin_password" type="password" class="form-control"
-                                            placeholder="Ingrese contraseña" name="admin_password" value="" required
-                                            autofocus>
+                                            placeholder="Ingrese contraseña" name="admin_password" value="" required>
                                         <div class="invalid-feedback">
                                             Contraseña invalida
                                         </div>
                                     </div>
 
+                                    <div class="mb-3" id="contenido-captcha">
+                                        <label class="mb-2 text-muted" for="text">Captcha</label>
+                                        <input id="admin_captcha" type="text" class="form-control"
+                                            placeholder="Ingresar captcha" name="admin_captcha" value="">
+                                        <br>
+                                        <img src="scripts/captcha.php" alt="">
+                                        <button type="button" id="btn-captcha-recargar"
+                                            class="btn btn-primary ms-auto">Recargar</button>
+                                        <div class="invalid-feedback">
+                                            Captcha invalida
+                                        </div>
+                                    </div>
+
                                     <div class="d-flex align-items-center">
 
-                                        <button type="submit" class="btn btn-primary ms-auto"
+                                        <input type="submit" id="btn-admin-acceder" name="btn-admin-acceder"
+                                            value="Acceder" class="btn btn-primary ms-auto"
                                             style="background-color:#557982; border-color: #557982;">
-                                            Acceder
-                                        </button>
+
                                     </div>
                                 </form>
                             </div>
