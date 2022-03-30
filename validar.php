@@ -14,15 +14,14 @@ if ($filas = mysqli_fetch_row($resultado)) {
 
     header("location:on_admin.php");
 } else {
-    header("location:admin.php");
-    echo $consulta;
+    //header("location:admin.php");
+    //echo $consulta;
     //include("admin.php");
+    header("location: index.php");
 ?>
     <div class="alert alert-danger">ERROR</div>
 <?php
 }
 mysqli_free_result($resultado);
-mysqli_close($conexion);
-
-
+desconectar();
 ?>
