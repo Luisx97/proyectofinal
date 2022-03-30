@@ -8,6 +8,12 @@
 <!-- JQuery 3.6.0 -->
 <script type="text/javascript" src="libs/bootstrap/js/jquery-3.6.0.js"></script>
 <!-- Core theme CSS (includes Bootstrap)-->
+
+<link href="css/styles.css" rel="stylesheet" />
+
+<script src="bootstrap/bootstrap.bundle.min.js"></script>
+
 <link href="libs/bootstrap/css/styles.css" rel="stylesheet" />
 <!-- Estilos.css-->
+
 <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/estilos.css">
