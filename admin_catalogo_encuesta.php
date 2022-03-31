@@ -18,13 +18,16 @@
     <title>Poder Judicial</title>
     <?php
         include ("include/head.php");
-    ?> 
+    ?>
 </head>
 
 <body>
     <?php
     include("con_db.php");
     ?>
+
+
+
     <main class="flex-shrink-0">
         <!-- Navigation-->
         <?php
@@ -36,8 +39,8 @@
                     include ("include/admin_menu.php");
                 ?>
                 <div class="col-lg-8 col-md-12">
-                <form name="form-work" action="scripts/encuesta_guardar.php" method="POST">
-                    
+                    <form name="form-work" action="scripts/encuesta_guardar.php" method="POST">
+
                         <h1 class="blog_bvn">Catálogo de Encuestas</h1>
                         <br></br>
                         <h4 class="blog_bvn">Titulo de Encuesta</h4>
@@ -68,15 +71,16 @@
                             <input class="btn btn-primary" type="submit" value="Enviar">
                         </div>
                         <br>
-                    
-                </form>
+
+                    </form>
                 </div>
             </div>
         </div>
-        <footer class="bg-dark py-4 mt-auto">
-            <?php
+</body>
+<footer class="bg-dark py-4 mt-auto">
+    <?php
             include ("include/footer.php")
         ?>
-        </footer>
+</footer>
 
-        </div>
+</div>

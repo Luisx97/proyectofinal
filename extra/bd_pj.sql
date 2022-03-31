@@ -236,10 +236,37 @@ ALTER TABLE `encuestas`
 -- AUTO_INCREMENT de la tabla `encuestas`
 --
 ALTER TABLE `encuestas`
+
   MODIFY `encuesta_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
--- Filtros para la tabla `usuarios_encuestas`
+--
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `preguntas`
 --
 
+CREATE TABLE `preguntas` (
+  `pregunta_id` int(11) NOT NULL,
+  `encuesta_id` int(11) NOT NULL,
+  `pregunta_titulo` varchar(259) NOT NULL,
+  `pregunta_variable` varchar(59) NOT NULL,
+  `pregunta_fecha_inicio` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `pregunta_fecha_final` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Indices de la tabla `encuestas`
+--
+ALTER TABLE `preguntas`
+  ADD PRIMARY KEY (`pregunta_id`),
+  ADD KEY `encuesta_id` (`encuesta_id`);
+
+  --
+-- AUTO_INCREMENT de la tabla `encuestas`
+--
+ALTER TABLE `preguntas`
+  MODIFY `pregunta_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+--
 -- --------------------------------------------------------
