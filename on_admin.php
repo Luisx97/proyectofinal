@@ -29,11 +29,12 @@
                             <table>
                                 <div align="center">
                                     <td><a href="admin_inicio.php"><img src="imagenes/gear.png" width="100"
-                                                height="100"></a></td>
+                                                height="100">
+                                    <text>Administrador</text></a></td>
                                 </div>
                                 <div align="center">
                                     <td><img src="imagenes/analisis-de-mercado.png" align=”middle” width="100"
-                                            height="100"></td>
+                                            height="100"><text>Reporte</text></td>
                                 </div>
                             </table>
                         </div>

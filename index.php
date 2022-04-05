@@ -31,8 +31,8 @@
                                 De Controversias</h1>
                             <p class="lead fw-normal text-white-50 mb-4">Se parte de la encuesta de satisfacción</p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Responder encuesta</a>
-                                <a class="btn btn-outline-light btn-lg px-4" href="#!">Leer más</a>
+                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="calificador.php">Responder encuesta</a>
+                                <a class="btn btn-outline-light btn-lg px-4" href="preguntas.php">Leer más</a>
                             </div>
                         </div>
                     </div>
