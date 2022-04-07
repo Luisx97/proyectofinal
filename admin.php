@@ -87,10 +87,7 @@
 
                         </div>
                     </div>
-
-
         </section>
-
     </main>
     <!-- Footer-->
     <?php

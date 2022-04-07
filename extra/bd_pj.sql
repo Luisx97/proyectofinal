@@ -4,7 +4,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
--- SET default_time_zone='Mexico'
+-- SET default_time_zone='Mexico/Merida'
 
 -- --------------------------------------------------------
 
@@ -226,6 +226,14 @@ CREATE TABLE `encuestas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Volcado de datos para la tabla `encuestas`
+--
+
+INSERT INTO `encuestas` (`encuesta_id`, `encuesta_titulo`, `anio_nombre`, `encuesta_descripcion`, `encuesta_estado`, `encuesta_fecha_inicio`, `encuesta_fecha_final`) VALUES
+(1, '¿Cuentas con aire acondicionado?', '2020', 'Contabilizar cuantas personas en Mérida cuenta con aire acondicionado', 0, '2022-04-08 04:41:38', '2022-04-23 05:00:00');
+
+-- --------------------------------------------------------
+--
 -- Indices de la tabla `encuestas`
 --
 ALTER TABLE `encuestas`
@@ -248,22 +256,28 @@ ALTER TABLE `encuestas`
 
 CREATE TABLE `preguntas` (
   `pregunta_id` int(11) NOT NULL,
-  `encuesta_id` int(11) NOT NULL,
   `pregunta_titulo` varchar(259) NOT NULL,
+  `pregunta_texto` varchar(259) NOT NULL,
   `pregunta_variable` varchar(59) NOT NULL,
   `pregunta_fecha_inicio` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `pregunta_fecha_final` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indices de la tabla `encuestas`
+-- Volcado de datos para la tabla `preguntas`
+--
+
+INSERT INTO `preguntas` (`pregunta_id`, `pregunta_titulo`, `pregunta_texto`, `pregunta_variable`, `pregunta_fecha_inicio`, `pregunta_fecha_final`) VALUES
+(1, 'Calentamiento Global', '¿Tienes calor?', 'calor', '2022-04-08 04:30:27', '2022-04-15 05:00:00');
+
+--
+-- Indices de la tabla `preguntas`
 --
 ALTER TABLE `preguntas`
-  ADD PRIMARY KEY (`pregunta_id`),
-  ADD KEY `encuesta_id` (`encuesta_id`);
+  ADD PRIMARY KEY (`pregunta_id`);
 
   --
--- AUTO_INCREMENT de la tabla `encuestas`
+-- AUTO_INCREMENT de la tabla `preguntas`
 --
 ALTER TABLE `preguntas`
   MODIFY `pregunta_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
