@@ -312,3 +312,21 @@ ALTER TABLE `resultados`
 --
 -- --------------------------------------------------------
 --
+--
+-- Estructura de tabla para la tabla `tipo_preguntas`
+--
+
+CREATE TABLE `tipo_preguntas` (
+  `tipo_id` int(11) NOT NULL,
+  `tipo_titulo` varchar(159) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tipo_preguntas`
+--
+
+INSERT INTO `tipo_preguntas` (`tipo_id`, `tipo_titulo`) VALUES
+(1, 'Opción múltiple'),
+(2, 'Nivel de medición'),
+(3, 'Abierta');
+COMMIT;
