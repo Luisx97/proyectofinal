@@ -94,3 +94,8 @@ Mariana [Testing : Administrador|Ciudadano]:
     Mariana [Testing : Administrador|Ciudadano]:{
 
     } -->
+
+    <!-- Instrucciones que necesita el proyecto, dividido en modulos (cliente/admin) 
+    
+    mockops, documentos, colores
+    -->

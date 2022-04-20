@@ -284,3 +284,31 @@ ALTER TABLE `preguntas`
 
 --
 -- --------------------------------------------------------
+--
+-- Estructura de tabla para la tabla `preguntas`
+--
+
+CREATE TABLE `resultados` (
+  `result_id` int(11) NOT NULL,
+  `encuesta_titulo` varchar(159) NOT NULL,
+  `pregunta_titulo` varchar(259) NOT NULL,
+  `tipo_result` varchar(99) NOT NULL,
+  `pregunta_fecha_inicio` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `pregunta_fecha_final` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Indices de la tabla `resultados`
+--
+ALTER TABLE `resultados`
+  ADD PRIMARY KEY (`result_id`);
+
+  --
+-- AUTO_INCREMENT de la tabla `resultados`
+--
+ALTER TABLE `resultados`
+  MODIFY `result_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+--
+-- --------------------------------------------------------
+--
