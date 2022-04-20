@@ -22,6 +22,12 @@
         $sqlencuesta         = ("SELECT * FROM  encuestas ORDER BY encuesta_titulo DESC LIMIT 5");
         $datacat_encuestaSelect  = mysqli_query($con, $sqlencuesta);
 
+        $sqlpregunta        = ("SELECT * FROM  preguntas ORDER BY pregunta_texto DESC LIMIT 5");
+        $datacat_preguntaSelect  = mysqli_query($con, $sqlpregunta);
+
+        $sqltipo_pregunta        = ("SELECT * FROM  tipo_preguntas ORDER BY tipo_titulo DESC LIMIT 5");
+        $datacat_tipo_preguntaSelect  = mysqli_query($con, $sqltipo_pregunta);
+
         ?>
 
       
