@@ -28,13 +28,18 @@
                             <h1>Administrador</h1>
                             <table>
                                 <div align="center">
-                                    <td><a href="admin_inicio.php"><img src="imagenes/gear.png" width="100"
-                                                height="100">
-                                    <text>Administrador</text></a></td>
+                                    <td><center><a href="admin_inicio.php"><img src="imagenes/gear.png" width="100"
+                                                height="100"></center>
+                                    <text><center>Administrador</center></text></a>
+                                    <text><justify>Alta de encuestas de satisfaccion de los clientes</justify></text>
+                                </td>
                                 </div>
                                 <div align="center">
-                                    <td><img src="imagenes/analisis-de-mercado.png" align=”middle” width="100"
-                                            height="100"><text>Reporte</text></td>
+                                    <td><center><img src="imagenes/analisis-de-mercado.png" align=”middle” width="100"
+                                            height="100"></center>
+                                            <text><center>Reporte</center></text>
+                                            <text><justify>Modulo de generacion y visualizacion de reportes de las encuestas</justify></text>
+                                    </td>
                                 </div>
                             </table>
                         </div>
