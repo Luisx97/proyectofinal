@@ -47,7 +47,7 @@
                         </thead>
                         <tbody>
                            <tr>
-                              <td>Aquì traer pregunta</td>
+                              <td>Aqui traer pregunta</td>
                               <td><a href="#feature">Opcion</a></td>
                               <td>
                                  <button //onclick="Agregaropcion(2)"// class="btn btn-success">Agregar</button>   
